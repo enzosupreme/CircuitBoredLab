@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <title>DB2021</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <bg-dark>
+
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-0.5 fixed-top">
+        <div class="container">
+            <a href="/index.html" class="navbar-brand">DiceBoard</a>
+        
+            <button 
+                class="navbar-toggler" 
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navmenu"
+            >
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav ms-auto">
+                
+               <li class="nav item">
+                   <a href="/index.html#projects" class="nav-link">Projects</a>
+               </li> 
+               <li class="nav item">
+                <a href="https://github.com/enzosupreme" class="nav-link">Github</a>
+                </li> 
+                <li class="nav item">
+                <a href="/index.html#about" class="nav-link">About</a>
+                </li> 
+                                
+            </ul>
+        </div>
+
+
+        </div>
+    </nav>
+
+    <section>
+        <div class="container">
+           <h1 class="text-warning text-center">DB2021</h1>
+        </div>
+    </section>
+
+  
+
+     <!--Carousel -->
+     
+     <section>
+        
+        <div id="carouselExampleSlidesOnly bg-dark" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/img/Diceboard/Db.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/img/Diceboard/diceb.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/img/Diceboard/PXL_20210805_233516333.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/img/Diceboard/floorboard.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>
+
+    </section>
+
+
+    <section>
+        <div class= "p-3 bg-dark text-light position-relative">
+            <div class="container">
+                
+                <p class= "text-center">
+                    The DB2021 came to me in a vision(no joke) after making a redox handwired keyboard, I had extra parts left over for potentially making  a macropad from scratch.
+                    While thinking of what to even do with a macropad, I came across a device someone made call a decision <a href= "https://www.instructables.com/Dry-Erase-Decision-Wheel/">wheel</a>.
+                    I thought, "that's funny I usually roll dice to help make decisions...". There it was, a mini-keyboard that rolls dice.
+                </p>
+
+                <p></p>
+                <h1 class="text-warning text-left">Stage 1: Planning and Prep</h1>
+                <p class= "text-center">
+                     After making a handwired mechanical keyboard, I had left over kailh box jade key switches and blank keycaps. I used arduino pro micros to in the keyboard build so I had a couple of those lying around. What I needed was an enclosure and a display.
+                     I printed a macropad enclosure found on <a href="https://www.thingiverse.com/thing:4497991">thingiverse</a> and bought a cheap I2c OLED display from amazon. The liPo battery and keyswitch came later.
+
+                </p>
+                <p></p>
+                <h1 class="text-warning text-left">Stage 2: Build</h1>
+                <p style="text-indent:40px" class= "text-center"></p>
+                    <!--<img src="/img/BatSignal/PXL_20210726_233530982.jpg" class="img-fluid md-5" alt="">-->
+                    The build began by placing the keyswitches into the 3D-printed keyplate. I decided to not do a diode matrix and instead treat each key as a unique digital input. To do this I soldered a wire to one pin of each key, then connected them all with wire for grounding.
+                    <img src="/img/Diceboard/wired.jpg" class="d-block w-100 img-fluid p-5" alt=""> It was a good start. Wiring the display was a lot easier than I was expecting. It has 4 pins, one for ground, one for power, and two data pins. After everything was assembled it was time to write some code and do some testing.
+                </p>
+                <!--<img src="/img/Macropad/Stage2.jpg" class="img-fluid md-5" alt="">-->
+                <p></p>
+                <p></p>
+                    <h1 class="text-warning text-left">Stage 3: Code</h1>
+                <p style="text-indent:40px" class= "text-center"></p>
+                    <!--<img src="/img/BatSignal/PXL_20210726_233530982.jpg" class="img-fluid md-5" alt="">-->
+                    I'm pretty new to Arduino, so writing the code for this was a challenge initially, but luckily I have enough familiarity with C++ (which arduino is based on) to get by. I started by figuring out the display. I had to learn how to use libraries for specific hardware to write arduino code for it. Pretty neat.
+                    I ran some various test using demo code to get the arduino to display. After the display worked, I wrote some simple test code to get the display custom messages. The next step was to write button inputs then a function for the dice rolls. Check out the code below:
+                    
+                    <p class="text-center p-3">
+                        <a href="https://github.com/enzosupreme/Diceboard">
+                            <button type="button" class="btn btn-success">Github</button></a>
+                     </p>
+
+                
+              </h6>
+              </p>
+              <p></p>
+
+              <h1 class="text-warning text-left">Stage 4: The Rebuild</h1>
+                <p style="text-indent:40px" class= "text-center"></p>
+                    Now that the board worked I decided it would be nice to make it portable. I then did some research to figure out how to attach a battery. I originally had a 9v battery plugged in,
+                    <img src="/img/Diceboard/preboard.jpg" class="d-block w-100 img-fluid p-5" alt=""> 
+                    but it was a bit cumbersome and had no way of switching it off and on. I found a rechargable liPo battery that would work fine with 
+                    a pro micro and found a way to connect a power switch. It needed a new enclosure. At the time I had been working on the <a href="/html/cyberdeck.html">Cyberdeck</a>, while doing so I was experimenting with custom 3d printed altoid tins. A slightly upscaled version of one
+                    seemed like a good fit for the diceboard. I found some relegendable keycaps on amazon, printed some dice icons and placed them accordingly. Into the new enclosure it went along with its new power source. Aesthetically it looks like a slapped together peice of junk...just the way I like it.
+              </h6>
+
+              <div style="text-align:center;" class="p-5">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/KNprIIscowk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            </div>
+            
+        </div>
+
+    </section>
+
+   
+
+    <!-- Footer -->
+    <footer class="md-15 p-3 bg-dark text-white text-center position-relative fluid">
+        <div class="container">
+            <p class="lead">Copyright &copy; 2021 Shaun Brown SMO-Labs</p>
+            <li>
+                <a href="#" class="nav-link position-absolute bottom-0 end- fixed-bottom">
+                    <i class="bi bi-arrow-up-circle h1 text-light"></i>
+                </a>
+            </li>
+            
+        </div>
+        
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+</body>
+</html>
