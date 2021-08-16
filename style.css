@@ -15,17 +15,8 @@ iframe {
     }
 }
 
-.carousel {
-    width: 200px;
+.carousel img {
+    margin:auto;
   }
 
-  .carousel-inner img {
-    margin: auto;
-  }
-
-  img
-{
-   width: 50%;
-   margin: auto;
-}
 
