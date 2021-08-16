@@ -19,3 +19,7 @@ iframe {
     width: 200px;
   }
 
+  .carousel-inner img {
+    margin: auto;
+  }
+
