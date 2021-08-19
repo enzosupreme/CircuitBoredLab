@@ -20,8 +20,9 @@ iframe {
   }
 
   .carousel-inner > .item {
+    margin:auto;
     height: 400px;
-    width: 100px
+    width: 100px;
  }
 
 
