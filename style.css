@@ -19,4 +19,8 @@ iframe {
     margin:auto;
   }
 
+  .carousel-inner > .item {
+    height: 400px;
+ }
+
 
