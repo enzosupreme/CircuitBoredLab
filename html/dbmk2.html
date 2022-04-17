@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <title>DiceBoard Mk 2</title>
+</head>
+<body class="d-xlg-flex fluid">
+    <!-- Navbar -->
+    <bg-dark>
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark py-0.5 fixed-top">
+            <div class="container">
+                <a href="/index.html" class="navbar-brand">Dice Board Mk2</a>
+
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navmenu">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navmenu">
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav item">
+                            <a href="/index.html#projects" class="nav-link">Projects</a>
+                        </li>
+                        <li class="nav item">
+                            <a href="https://github.com/enzosupreme" class="nav-link">Github</a>
+                        </li>
+                        <li class="nav item">
+                            <a href="/index.html#about" class="nav-link">About</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+            </div>
+        </nav>
+
+        <section>
+            <div class="container-fluid">
+                <h1 class="text-warning text-center">DiceBoard Mk2</h1>
+            </div>
+        </section>
+
+
+
+        <!--Carousel -->
+
+        <section>
+
+
+            <div id="carousel bg-dark" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/img/DBMk2/DB2/1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/DBMk2/DB2/2.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/DBMk2/DB2/3.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/DBMk2/DB2/5.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/DBMk2/DB2/6.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section>
+            <div class="p-3 bg-dark text-light position-relative">
+                <div class="container">
+
+                    <p class="text-center">
+                        I was really proud of and often use my <a href="/html/diceboard.html">Diceboard </a>, but I wanted to design and build one from scratch.
+                        I also needed an excuse to learn and practice designing with Fusion360. I wanted something simple and satisfying to hold as a handheld device. Thus I began work on DiceBoard Mk2.
+                    </p>
+
+                    <p></p>
+                    <h1 class="text-warning text-left">Stage 1: Design</h1>
+                    <p class="text-center">
+                        After stumbling through several youtube tutorials, I was able to get acclimated to Fusion360 enough to get started designing an enclosure for the new diceboard. I kept it simple by designing a small rectangular box with holes cut out for the usb port and power switch.
+                        I decided to try out a wide oled to save space. I measaured the OLED and the keyswitches to design a base plate for the components. I went for a six button set to cover a full set of dice plus an extra button to total dicerolls.
+
+                    </p>
+                    <img src="/img/DBMk2/DB2/Capture.jpg" class="img-fluid md-5" media="(max-width: 400px)" alt="">
+                    <p class="text-center">
+                        I chose white, glow-in-the-dark filament for the base of the enclosure and black for the plate. The prints worked perfectly and the overall process helped me build my confidence with Fusion360.
+                    </p>
+                    <p></p>
+                    <h1 class="text-warning text-left">Stage 2: Build</h1>
+                    <p style="text-indent:40px" class="text-center"></p>
+                    <!--<img src="/img/BatSignal/PXL_20210726_233530982.jpg" class="img-fluid md-5" alt="">-->
+                    The build was similar to the first one. I used a<a href="https://www.amazon.com/Dorhea-Display-SSD1306-Arduino-3-3V-5V/dp/B07FMDB6TR/ref=sr_1_17?crid=34MRPJLDHNLNC&keywords=wide+micro+oled&qid=1650226056&sprefix=wide+micro+oled%2Caps%2C92&sr=8-17">wide OLED</a> 
+                    this time, but all of the same components as the last build. It took no more than half an hour to wire and solder everything up. I used a hot glue gun to adhere the plate to the base. I used the same program I wrote for the first Diceboard with some edits for the display.
+                    As an added bonus I created a "holo display attatchment to give it a more sci-fi aesthetic."
+                    </p>
+                    <img src="/img/DBMk2/DB2/2.jpg" class="img-fluid md-5" media="(max-width: 400px)" alt="">
+                    <p></p>
+                    <p></p>
+                    
+                    <p class="text-center">The code can be found here on my github:
+                    <p class="text-center">
+                        <a href="https://github.com/enzosupreme/Diceboard/">
+                            <button type="button" class="btn btn-success">Github</button>
+                        </a>
+                    </p>
+
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Footer -->
+        <footer class="md-15 p-3 bg-dark text-white text-center position-relative fluid">
+            <div class="container">
+                <p class="lead">Copyright &copy; 2021 Shaun Brown, Circuit Bored Lab</p>
+        <li>
+            <a href="#" class="nav-link position-absolute bottom-0 end- fixed-bottom">
+                <i class="bi bi-arrow-up-circle h1 text-light"></i>
+            </a>
+        </li>
+
+        </div>
+
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
