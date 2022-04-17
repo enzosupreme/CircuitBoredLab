@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <title>GM Shark</title>
+</head>
+<body class="d-xlg-flex fluid">
+    <!-- Navbar -->
+    <bg-dark>
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark py-0.5 fixed-top">
+            <div class="container">
+                <a href="/index.html" class="navbar-brand">GM Shark</a>
+
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navmenu">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navmenu">
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav item">
+                            <a href="/index.html#projects" class="nav-link">Projects</a>
+                        </li>
+                        <li class="nav item">
+                            <a href="https://github.com/enzosupreme" class="nav-link">Github</a>
+                        </li>
+                        <li class="nav item">
+                            <a href="/index.html#about" class="nav-link">About</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+            </div>
+        </nav>
+
+        <section>
+            <div class="container-fluid">
+                <h1 class="text-warning text-center">GM Shark</h1>
+            </div>
+        </section>
+
+
+
+        <!--Carousel -->
+
+        <section>
+
+
+            <div id="carousel bg-dark" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/img/GMShark/1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/GMShark/2.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/GMShark/3.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/GMShark/4.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    
+                </div>
+            </div>
+
+        </section>
+
+
+        <section>
+            <div class="p-3 bg-dark text-light position-relative">
+                <div class="container">
+
+                    <p class="text-center">
+                        This didn't start out as another dice roller. I made this as a DM tool for table top games. The GM Shark contains a weapon generator and  custom dice to help with DMing.
+                        The GM Shark uses a rotary encoder and two keyswitches. The whole thing was written in Circuit Python. The goal was to build skills in writing circuit python and to implement my lootbox idea into a physical device.
+                    </p>
+
+                    <p></p>
+                    <h1 class="text-warning text-left">Stage 1: Design and Build</h1>
+                    <p class="text-center">
+                        Having gained some skills with Fusion360 while working on the second diceboard, I felt comfortable enough to experiment a bit with a handheld device design. I used adobe illustrator to create an SVG file of the text to use in F360 to engrave the enclosure.
+
+                    </p>
+                    <img src="/img/GMShark/8.jpg" class="img-fluid md-5" media="(max-width: 400px)" alt="">
+                    <p class="text-center">
+                        I wanted to use a rotary encoder to cycle through options and have two buttons with separate functions. I also made it battery powered using a Lipo battery.
+
+                    </p>
+
+                    <h1 class="text-warning text-left">Stage 2: Code</h1>
+                    <p style="text-indent:40px" class="text-center"></p>
+                    The first callenge was getting te OLED display working via circuit python. I used the <a href="https://learn.adafruit.com/micropython-hardware-ssd1306-oled-display/circuitpython"> adafruit website </a>and the official documentation to figure out how to display text to the display.
+                    </p>
+                    <img src="/img/GMShark/9.jpg" class="img-fluid md-5" media="(max-width: 400px)" alt="">
+                    <p style="text-indent:40px" class="text-center"></p>
+                    After getting the display to display text, getting the buttons working then the encoder. After figuring out both, I wrote some test code to send text to the display after key presses and position changes. One roadblock I ran into was printed intergers to the display. I
+                    resorted to converting all integers to strings just to get the right text to display. I set the encoder to cycle through the number of sides for each die. I setup the right button to roll the current selected die and the left button to print the total of the accumulated dice rolls.
+                    I then set out to solve implementing the weapon generator. For this I flipped through the 5th edition of the Dungeons and Dragons Player's handbook to see what data I needed to make weapons. Since everything is text based I just needed the data to represent the values of the required stats for each weapon.
+                    Each weapon needed a name(or type),Level, Damage Type, Damage, Cost(or price), and weight. I knew I could write a function to get random numbers for most of those, but determining damage type wouldn't be as straight forward. Luckily there are only three damage types, so I put them in a list as strings then organized the list of weapon names in order.
+                    I then made a condition that checks weapon name first then assigns the appropriate damage type based on the name's position in the list. After that it was just a matter of formatting the layout of the text and adding that function to the encoder's position change.
+                    </p>
+                    <p></p>
+                    <p></p>
+
+                    <p class="text-center">The code can be found here on my github:
+                    <p class="text-center">
+                        <a href="https://github.com/enzosupreme/GMShark">
+                            <button type="button" class="btn btn-success">Github</button>
+                        </a>
+                    </p>
+
+
+
+                </div>
+
+                <div style="text-align:center;">
+                    <iframe width="1280" height="720" src="https://www.youtube.com/embed/HmGb0T5nvXI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div style="text-align:center;">
+                    <iframe width="1280" height="720" src="https://www.youtube.com/embed/BChWPiJkMr4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Footer -->
+        <footer class="md-15 p-3 bg-dark text-white text-center position-relative fluid">
+            <div class="container">
+                <p class="lead">Copyright &copy; 2021 Shaun Brown, Circuit Bored Lab</p>
+        <li>
+            <a href="#" class="nav-link position-absolute bottom-0 end- fixed-bottom">
+                <i class="bi bi-arrow-up-circle h1 text-light"></i>
+            </a>
+        </li>
+
+        </div>
+
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
