@@ -91,6 +91,9 @@
                     </p>
 
                     <p></p>
+                    <div style="text-align:center;">
+                        <img src="/img/POV/2.gif" class="img-fluid md-5" media="(max-width: 400px)" alt="">
+                    </div>
 
                     <h1 class="text-warning text-left">Stage 1: Design and Build</h1>
                     <p class="text-center">
@@ -99,31 +102,29 @@
                         I was able to pull it off, but the design made it dificult to rotate the LEDs consistently. I came up with a design that used a ball bearing that you flick and keeps a good rotation for a short time until you manually add more momentum.
 
                     </p>
+
                     <div style="text-align:center;">
-                        <img src="/img/POV/2.gif" class="img-fluid md-5" media="(max-width: 400px)" alt="">
-                    </div>
-                    <div style="text-align:center;">
-                         <iframe width="644" height="1144" src="https://www.youtube.com/embed/gYXeW5fHAvs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="644" height="1144" src="https://www.youtube.com/embed/gYXeW5fHAvs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
 
-                        <h1 class="text-warning text-left">Stage 2: Code</h1>
-                        <p style="text-indent:40px" class="text-center"></p>
-                        First I had to look up the documentation on the neopixel rgb lights I used for this project. After learning how to control the LEDs, I came up with a basic loop that cycles through a library of colors I setup. I created an alphabet "library" by making an list of values per letter of the alphabet and numebers 0-9.
-                        Each character contain a list of values of either 0 or x, x being the current color. Either value gets fed as an argument for a function I wrote that turns the LEDs off and on in sequence. For the timing I borrowed a formula from another POV display project that used arduino. After converting the formula into circuit python
-                        I was able to properly time the lights using the hall sensor to calcuate a time of rotation. Using the function I wrote, I called the function using the letters of my niece's first name as arguments to spell her name on the POV display.
-                        <p></p>
-                        <p></p>
+                    <h1 class="text-warning text-left">Stage 2: Code</h1>
+                    <p style="text-indent:40px" class="text-center"></p>
+                    First I had to look up the documentation on the neopixel rgb lights I used for this project. After learning how to control the LEDs, I came up with a basic loop that cycles through a library of colors I setup. I created an alphabet "library" by making an list of values per letter of the alphabet and numebers 0-9.
+                    Each character contain a list of values of either 0 or x, x being the current color. Either value gets fed as an argument for a function I wrote that turns the LEDs off and on in sequence. For the timing I borrowed a formula from another POV display project that used arduino. After converting the formula into circuit python
+                    I was able to properly time the lights using the hall sensor to calcuate a time of rotation. Using the function I wrote, I called the function using the letters of my niece's first name as arguments to spell her name on the POV display.
+                    <p></p>
+                    <p></p>
 
-                        <p class="text-center">The code can be found here on my github:
-                        <p class="text-center">
-                            <a href="https://github.com/enzosupreme/POVDisplay">
-                                <button type="button" class="btn btn-success">Github</button>
-                            </a>
-                        </p>
+                    <p class="text-center">The code can be found here on my github:
+                    <p class="text-center">
+                        <a href="https://github.com/enzosupreme/POVDisplay">
+                            <button type="button" class="btn btn-success">Github</button>
+                        </a>
+                    </p>
 
 
 
-                    </div>
+                </div>
 
                     <div style="text-align:center;">
                         <iframe width="1280" height="720" src="https://www.youtube.com/embed/u9oq68Yc548" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
