@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <title>GM Shark</title>
+</head>
+<body class="d-xlg-flex fluid">
+    <!-- Navbar -->
+    <bg-dark>
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark py-0.5 fixed-top">
+            <div class="container">
+                <a href="/index.html" class="navbar-brand">Shell Shock</a>
+
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navmenu">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navmenu">
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav item">
+                            <a href="/index.html#projects" class="nav-link">Projects</a>
+                        </li>
+                        <li class="nav item">
+                            <a href="https://github.com/enzosupreme" class="nav-link">Github</a>
+                        </li>
+                        <li class="nav item">
+                            <a href="https://www.instagram.com/circuitboredlab/" class="nav-link">Instagram</a>
+                        </li>
+                        <li class="nav item">
+                            <a href="/index.html#about" class="nav-link">About</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+            </div>
+        </nav>
+
+        <section>
+            <div class="container-fluid">
+                <h1 class="text-warning text-center">Shell Shock</h1>
+            </div>
+        </section>
+
+
+
+        <!--Carousel -->
+
+        <section>
+
+
+            <div id="carousel bg-dark" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/img/Shellshock/13.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/Shellshock/12.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/Shellshock/11.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/Shellshock/10.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/Shellshock/9.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/Shellshock/4.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/Shellshock/5.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    
+                </div>
+            </div>
+
+        </section>
+
+
+        <section>
+            <div class="p-3 bg-dark text-light position-relative">
+                <div class="container">
+
+                    <p class="text-center">
+                        I decided to build a  <a href="https://www.thingiverse.com/thing:2704567"> Redox split key keyboard</a> using KMK firmware and Circuit Python. The Color Scheme was loosly Inspired by TMNT.
+
+                    </p>
+
+                    <p></p>
+
+                    <img src="/img/Shellshock/7.jpg" class="img-fluid md-5" media="(max-width: 400px)" alt="">
+
+                    <h1 class="text-warning text-left">Stage 1: Design and Build</h1>
+                    <p class="text-center">
+
+                        I didn't need to design anything for this build I printed the enclosure straight from thingiverse. Instead of ordering a custom PCB, i decided to handwire the keyboard. It isn't too difficult to do, but kind of time consuming. The over all process is somewhat therapuetic though. First I started by
+                        prepping the diodes by bending one end and clipping the excesss. I had to make one for each key, 75 total.
+
+                    </p>
+                    <img src="/img/Shellshock/3.jpg" class="img-fluid md-5" media="(max-width: 400px)" alt="">
+                    <p class="text-center">
+                        I printed the base of the enclosure in olive drab and printed the top with wood PLA. It is plastic filament with a small percentage of wood. Its not very convincing fresh off of the printer, but the material can be sanded and stained, to make it look more authentic.
+
+                    </p>
+
+                    <img src="/img/Shellshock/2.jpg" class="img-fluid md-5" media="(max-width: 400px)" alt="">
+                    <img src="/img/Shellshock/1.jpg" class="img-fluid md-5" media="(max-width: 400px)" alt="">
+
+                    <p class="text-center">
+                        After wiring both sides up to a microcontroller it was time to flash the software.
+
+                    </p>
+
+                    <h1 class="text-warning text-left">Stage 2: Code</h1>
+                    <p style="text-indent:40px" class="text-center"></p>
+                    I went to the <a href="https://github.com/KMKfw/kmk_firmware/tree/master/boards"> kmk firmware</a> github page to get started. I went over some of the example default layouts to get started on adapting the redox to circuit python. After a lot of tinkering and reading over the kmk documentation,
+                    I was able to come up with a base layer keymap. Both sides of the keyboard worked independently when plugged in after loading the software to the boards. For some reason the side not plugged in with the USB cable would not work when plugged into the other side. I struggled with troubleshooting and researching a fix as well
+                    as rewiring multiple components in my build. I could not get both sides working in tandem. I eventually resorted to hardwiring the right side to the left side using a pi pico which provided enough pins to pull this off.
+                    </p>
+                    <img src="/img/Shellshock/11.jpg" class="img-fluid md-5" media="(max-width: 400px)" alt="">
+                    <p style="text-indent:40px" class="text-center"></p>
+                    After rewiring the keyboard and make some last modifications to the code, everything worked as intended. It was now time to iron out the layout.
+                    </p>
+                    <h1 class="text-warning text-left">Stage 3: Layout</h1>
+                    <p style="text-indent:40px" class="text-center"></p>
+                  
+                    I went with a three layer layout for this build. they first layer is mostly just a standard qwerty layout. I setup two backspaces in the center where they are easy to reach since I use them so much. I have the four arrow keys, parentheses and brackets all in the center. Lastly in the center are the two
+                    space bar keys. I like have the shift key there as well, so I set it up to be space bars on tap and shift keys on hold. For the second layer, the right side becomes the keypad giving my keyboard a built in tenkey without the extra physical keys. For the left side, WASD becomes the arrow keys for easy navigation.
+                    Underneath, I swapp the first layer keys with their corresponding edit functions(undo,cut,copy,paste). The up and down arrows in the center become the volume controls and the right and left arrows can be used to change tracks.
+                    I use the third layer as an experimental layer. I set up the left side as a launch pad. I have keys set to launch four of my favorite programs. On the right side I made shortcuts for emotes and features for Discord. I plan to keep evolving this keyboard as I go along. I was kind of overwhelmed with the possiblities this firmware allows,
+                    so from here I'll be adding features as they come to mind.
+                    
+                    </p>
+                    <p></p>
+
+                    <p class="text-center">The code can be found here on my github:
+                    <p class="text-center">
+                        <a href="https://github.com/enzosupreme/ShellShock">
+                            <button type="button" class="btn btn-success">Github</button>
+                        </a>
+                    </p>
+
+
+
+                </div>
+
+                
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Footer -->
+        <footer class="md-15 p-3 bg-dark text-white text-center position-relative fluid">
+            <div class="container">
+                <p class="lead">Copyright &copy; 2021 Shaun Brown, Circuit Bored Lab</p>
+        <li>
+            <a href="#" class="nav-link position-absolute bottom-0 end- fixed-bottom">
+                <i class="bi bi-arrow-up-circle h1 text-light"></i>
+            </a>
+        </li>
+
+        </div>
+
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
