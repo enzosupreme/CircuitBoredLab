@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <title>Cyber Punkin</title>
+</head>
+<body class="d-xlg-flex fluid">
+    <!-- Navbar -->
+    <bg-dark>
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark py-0.5 fixed-top">
+            <div class="container">
+                <a href="/index.html" class="navbar-brand">Cyber Punkin</a>
+
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navmenu">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navmenu">
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav item">
+                            <a href="/index.html#projects" class="nav-link">Projects</a>
+                        </li>
+                        <li class="nav item">
+                            <a href="https://github.com/enzosupreme" class="nav-link">Github</a>
+                        </li>
+                        <li class="nav item">
+                            <a href="https://www.instagram.com/circuitboredlab/" class="nav-link">Instagram</a>
+                        </li>
+                        <li class="nav item">
+                            <a href="https://www.etsy.com/shop/CircuitBoredLab" class="nav-link">Shop</a>
+                        </li>
+                        <li class="nav item">
+                            <a href="/index.html#about" class="nav-link">About</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+            </div>
+        </nav>
+
+        <section>
+            <div class="container-fluid">
+                <h1 class="text-warning text-center">Cyber Punkin</h1>
+            </div>
+        </section>
+
+
+
+        <!--Carousel -->
+
+        <section>
+
+
+            <div id="carousel bg-dark" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <img src="/img/Cyber-Punkin/5.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item active">
+                        <img src="/img/Cyber-Punkin/4.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/Cyber-Punkin/1.JPG" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/Cyber-Punkin/2.JPG" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/Cyber-Punkin/3.jpg" class="d-block w-100" alt="...">
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+
+        <section>
+            <div class="p-1 bg-dark text-light position-relative">
+                <div class="container">
+
+                    <p class="text-center">
+                        I wanted to make a cool Halloween decoration so using a color sensing module, I came up with a color changing jack-o-lantern. I call it the cyber punkin.
+                    </p>
+
+                    <p></p>
+                    <h1 class="text-warning text-left" ,style="text-align: center;">Design/Build/Code</h1>
+                    <p class="text-center">
+                        I'm still not very good at 3d design so I started this project by following a great <a href="https://youtu.be/iuxGKbvCw7I">tutorial</a> by "3D printy". I learned a lot watching this video and was able to design a few pumpkins of my own. After coming up with basic jack-o-lantern, I began wiring everytthing up.
+                        For this I used an <a href="https://www.adafruit.com/product/3800">itsy bitsy m4 express</a>. I wired up an rgb led strip and a <a href="https://www.adafruit.com/product/1356">color sensing module</a>. I used a AAA battery pack to power it up. While designing the pumpkin I made the stem on a seperate body to be printed in a variety of colors.
+                        Here's a demo of it working:
+
+
+                    </p>
+                    <p></p>
+                    <div style="text-align:center;">
+                        <iframe class="center-block" width="560" height="315" src="https://www.youtube.com/embed/QUA-3C1KxhY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p></p>
+
+
+                    <p class="text-center">The code can be found here on my github:
+                    <p class="text-center">
+                        <a href="https://github.com/enzosupreme/CyberPunkin">
+                            <button type="button" class="btn btn-success">Github</button>
+                        </a>
+                    </p>
+
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Footer -->
+        <footer class="md-15 p-3 bg-dark text-white text-center position-relative fluid">
+            <div class="container">
+                <p class="lead">Copyright &copy; 2021 Shaun Brown, Circuit Bored Lab</p>
+        <li>
+            <a href="#" class="nav-link position-absolute bottom-0 end- fixed-bottom">
+                <i class="bi bi-arrow-up-circle h1 text-light"></i>
+            </a>
+        </li>
+
+        </div>
+
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
