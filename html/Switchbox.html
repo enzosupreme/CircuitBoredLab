@@ -68,55 +68,33 @@
 
             <div id="carousel bg-dark" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="/img/switchbox/18.gif" class="d-block w-100" alt="...">
-                    </div>
-
-                    <div class="carousel-item active">
-                        <img src="/img/switchbox/1.JPG" class="d-block w-100" alt="...">
-                    </div>
-
-                    <div class="carousel-item active">
-                        <img src="/img/switchbox/3.JPG" class="d-block w-100" alt="...">
-                    </div>
-
-                    <div class="carousel-item active">
-                        <img src="/img/switchbox/10.jpg" class="d-block w-100" alt="...">
-                    </div>
-
-                    <div class="carousel-item active">
-                        <img src="/img/switchbox/11.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item active">
-                        <img src="/img/switchbox/17.jpg" class="d-block w-100" alt="...">
-                    </div>
-
-                    <div class="carousel-item active">
-                        <img src="/img/switchbox/14.jpg" class="d-block w-100" alt="...">
-                    </div>
-
-                    <div class="carousel-item active">
+                    <div class="carousel-item">
                         <img src="/img/switchbox/15.gif" class="d-block w-100" alt="...">
                     </div>
-
                     <div class="carousel-item active">
-                        <img src="/img/switchbox/16.jpg" class="d-block w-100" alt="...">
+                        <img src="/img/switchbox/2.jpg" class="d-block w-100" alt="...">
                     </div>
-
-                    <div class="carousel-item active">
-                        <img src="/img/switchbox/8.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-item">
+                        <img src="/img/switchbox/12.JPG" class="d-block w-100" alt="...">
                     </div>
-
-                    <div class="carousel-item active">
-                        <img src="/img/switchbox/9.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-item">
+                        <img src="/img/switchbox/9.JPG" class="d-block w-100" alt="...">
                     </div>
-
-
+                    <div class="carousel-item">
+                        <img src="/img/switchbox/17.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/switchbox/18.gif" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/img/switchbox/14.jpg" class="d-block w-100" alt="...">
+                    </div>
 
                 </div>
             </div>
 
         </section>
+
 
 
         <section>
@@ -137,28 +115,28 @@
                     <h1 class="text-warning text-left">Stage 1: Design and Build</h1>
                     <p class="text-center">
 
-                         The design for this was pretty basic. I made a box for the main buttons, 6 on top and four on the front. I made a hole for the rotary encoder and slots for the display, usb port and connector. I followed the same design concept for the slave sides. I printed the enclosures with magnets to have them snap together... it works well,
+                        The design for this was pretty basic. I made a box for the main buttons, 6 on top and four on the front. I made a hole for the rotary encoder and slots for the display, usb port and connector. I followed the same design concept for the slave sides. I printed the enclosures with magnets to have them snap together... it works well,
                         but the magnets need to be stronger, I may have to redesign this at a later date, but for now it works well as a desktop controller.
 
 
                     </p>
                     <img src="/img/switchbox/5.jpg" class="img-fluid md-5" media="(max-width: 400px)" alt="">
-           
+
 
                     <h1 class="text-warning text-left">Stage 2: Code</h1>
                     <p style="text-indent:40px" class="text-center"></p>
 
-                        So before I played around with <ahref ="https://github.com/FeralAI/GP2040">GP2040</ahref>, Firstly I wanted to add a display so I could display the key layout while in use and a rotary encoder to switch between modes.
-                        I had the idea of building it like a split kb using kmk firmware having a main side that auxillary sides could connect to using a trrs conncection. This proved to be more difficult I anticipated. The kmk firmware is setup to read inputs from a grid matrix, this makes sense because it is designed for home made keyboard which would typically have more keys than pins available on the board.
-                        I however did not wire the buttons in a matrix configuration, but instead had each key wired to the board independently. Without columns and rows assigned I could not figure out how to read inputs from a secondary board, despite the board receiving power. To work around this I decided to connect wires directly to board and connected them to a JST connecter.
-                        I then wired the male side to the joystick and one to the hitbox. This allowed me to split the connection while the board assumes the controls are wired directly. I then created a key layout for NullDC(a dreamcast/naomi emulator), steam and a multimedia control layer. I setup the media layer to also allow me to scroll web pages using the joystick.
-                        It took me a while and a bunch of research to get the display working, but after a lot of tinkering I got the display on and had it print the current keymap of the layer currently assigned.
+                    So before I played around with <ahref ="https://github.com/FeralAI/GP2040">GP2040</ahref>, Firstly I wanted to add a display so I could display the key layout while in use and a rotary encoder to switch between modes.
+                    I had the idea of building it like a split kb using kmk firmware having a main side that auxillary sides could connect to using a trrs conncection. This proved to be more difficult I anticipated. The kmk firmware is setup to read inputs from a grid matrix, this makes sense because it is designed for home made keyboard which would typically have more keys than pins available on the board.
+                    I however did not wire the buttons in a matrix configuration, but instead had each key wired to the board independently. Without columns and rows assigned I could not figure out how to read inputs from a secondary board, despite the board receiving power. To work around this I decided to connect wires directly to board and connected them to a JST connecter.
+                    I then wired the male side to the joystick and one to the hitbox. This allowed me to split the connection while the board assumes the controls are wired directly. I then created a key layout for NullDC(a dreamcast/naomi emulator), steam and a multimedia control layer. I setup the media layer to also allow me to scroll web pages using the joystick.
+                    It took me a while and a bunch of research to get the display working, but after a lot of tinkering I got the display on and had it print the current keymap of the layer currently assigned.
 
-                        I did end up playing around with GP2040 and I really like it. It is a very user friendly firmware with an easy use configuration app. The on display button mapping works well too and it is multi-platform. As much as I liked it, it was limited in cusomizability so end the end I went back to what I wrote.
+                    I did end up playing around with GP2040 and I really like it. It is a very user friendly firmware with an easy use configuration app. The on display button mapping works well too and it is multi-platform. As much as I liked it, it was limited in cusomizability so end the end I went back to what I wrote.
 
                     </p>
-                    
-                    
+
+
 
                     <p class="text-center">The code can be found here on my github:
                     <p class="text-center">
